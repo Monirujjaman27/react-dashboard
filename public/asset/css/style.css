@@ -1,0 +1,15 @@
+body {
+    font-size: 15px;
+}
+.header-item-link {
+    border-bottom: 1px solid #000;
+    width: 0%;
+}
+.nav-item:hover .header-item-link {
+    width: 100%;
+    transition: 0.5s;
+}
+.nav-item:hover .nav-link {
+    color: #000 !important;
+    transition: 0.5s;
+}

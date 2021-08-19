@@ -1,0 +1,10 @@
+@media (min-width: 0px) and (max-width: 492px) {
+    .brand-text {
+        display: none;
+    }
+}
+@media (min-width: 1020px) and (max-width: 1500px) {
+    .header-search-form {
+        width: 50%;
+    }
+}

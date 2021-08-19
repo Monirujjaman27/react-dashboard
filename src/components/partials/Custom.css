@@ -1,0 +1,13 @@
+.loadingspinner {
+    position: fixed;
+    z-index: 999999;
+    top: 50%;
+    margin: auto;
+    width: 80%;
+}
+.table td{
+    padding: 3px;
+}
+.table tr th{
+    color: black !important;
+}
