@@ -41,7 +41,10 @@ export default class Category extends Component {
                 sortable: true,
                 cell: record => {
                     return (
-                        record.name
+                        <>
+                            <span>{record.name} {record.posts_count} </span>
+
+                        </>
                     )
                 }
             },

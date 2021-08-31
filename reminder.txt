@@ -1,0 +1,21 @@
+ .catch((error) => {
+                console.error('Error:', error);
+                console.log('res', response);
+                if (response.status) {
+                    await tostNtf(response.message);
+                    this.setState({
+                        title: '',
+                        slug: '',
+                        category: '',
+                        tags: '',
+                        thumbnail: '',
+                        isLoading: false,
+                    });
+                } else {
+                    this.setState({
+                        errors: response.errors,
+                        isLoading: false,
+                    });
+                    console.log(`ressponse.errors`, response.errors)
+                }
+            });

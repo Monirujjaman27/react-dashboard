@@ -7,8 +7,10 @@ window.onload = (event) => {
 
 const ADMIN_PREFIX = "/admin/";
 const API_PREFIX = "http://127.0.0.1:8000/api/admin/";
+const HOME_PREFIX = "http://127.0.0.1:8000";
 const web = {
     admin: {
+        home_api: HOME_PREFIX,
         dashboard: ADMIN_PREFIX,
         //category Route
         category: ADMIN_PREFIX + 'category',
@@ -24,9 +26,12 @@ const api = {
     admin: {
         //category api
         category: API_PREFIX + 'category',
-        enabledCategory: API_PREFIX + 'category/create',
+        getEnabledCategory: API_PREFIX + 'category/create',
         // blog api 
         blog: API_PREFIX + 'post',
+        //descriptio,
+        description: API_PREFIX + 'description',
+        nullDescription: API_PREFIX + 'description/null',
     }
 }
 

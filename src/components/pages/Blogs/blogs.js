@@ -54,6 +54,13 @@ export default class Blogs extends Component {
                 key: "thumbnail",
                 text: "Thumbnail",
                 align: "left",
+                cell: record => {
+                    return (
+                        <>
+                            <img width="50px" src={Routes.web.admin.home_api + '/' + record.thumbnail} />
+                        </>
+                    );
+                }
             },
             {
                 key: 'status',
@@ -125,7 +132,7 @@ export default class Blogs extends Component {
         const res = await StEaD(id);
         if (res.status == 200) {
             this.getData();
-            tostNtf('Status Changed successfully')
+            await tostNtf(res.data.message)
         } else {
             tostNtf('Oppes something went wrong :) Please try again', 'warning')
         }
@@ -138,9 +145,9 @@ export default class Blogs extends Component {
         const res = await delData(record.id);
         if (res.status === 200) {
             this.getData();
-            tostNtf('blog Delete successfully');
+            await tostNtf(res.data.message);
         } else {
-            tostNtf('Oppes something went wrong :) Please try again', 'warning')
+            await tostNtf('Oppes something went wrong :) Please try again', 'warning')
         }
     }
 
